@@ -13,6 +13,7 @@
 
 body {
     background-color: #F9FAFC;
+    font-size: 16px;
 }
 
 /* Estilizações para a barra de navegação ('index.html' + 'users.html') */
@@ -23,24 +24,23 @@ body {
     color: #FFF;
     display: flex;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 20px 5%;
 }
 
 .navbar .logo {
     color: #63636D;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
 .navbar .menu {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .navbar .menu a {
     color: #63636D;
-    font-size: 16px;
-    margin-right: 20px;
+    font-size: 1rem;
     text-decoration: none;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
@@ -62,8 +62,9 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0 5%;
 }
 
 .form-container .title,
@@ -74,27 +75,30 @@ body {
 .form-container .title h1,
 .users-container .title h1 {
     color: #1F2F48;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .form-container .title p,
 .users-container .title p {
     color: #858C98;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .form-container .form {
     background-color: #FFF;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
+    padding: 1.5rem;
+    max-width: 90%;
+    width: 400px;
 }
 
 .form-container .form h3 {
     color: #1F2F48;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
 }
 
 .form-container .form form {
@@ -104,16 +108,17 @@ body {
 
 .form-container .form label {
     color: #1F2F48;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
 .form-container .form input {
     background-color: #F7F7F7;
     border: 1px solid #D0DBEF;
     border-radius: 5px;
-    font-size: 1em;
-    margin-bottom: 15px;
-    padding: 7px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
     outline: none;
     transition: border-color 0.3s ease;
 }
@@ -129,11 +134,56 @@ body {
     border-radius: 5px;
     color: #FFF;
     cursor: pointer;
-    font-size: 1em;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 0.75rem;
     transition: background-color 0.3s ease;
 }
 
 .form-container .form button:hover {
     background-color: #708EBC;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+
+    .navbar .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .form-container .form {
+        width: 100%;
+    }
+
+    .form-container .title h1,
+    .users-container .title h1 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1rem;
+    }
+
+    .navbar .menu a {
+        font-size: 0.875rem;
+    }
+
+    .form-container .form {
+        padding: 1rem;
+    }
+
+    .form-container .form button {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
 }
