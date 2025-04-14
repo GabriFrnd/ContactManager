@@ -147,16 +147,18 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        align-items: flex-start;
+        align-items: center;
+        display: flex;
         flex-direction: column;
         padding: 10px 5%;
     }
 
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+
     .navbar .menu {
-        display: flex;
-        flex-direction: column;
         gap: 10px;
-        width: 100%;
     }
 
     .form-container .form {
