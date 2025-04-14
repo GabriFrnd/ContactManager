@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR"> <!-- Linguagem padrão: português do Brasil -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="src/styles.css"> <!-- Link: arquivo 'styles.css' para estilos em CSS -->
+    <title>ContactManager | Agenda on-line</title> <!-- Título da página -->
 </head>
 <body>
-    <script src="src/script.js"></script>
+
+    <!-- Construção da barra de navegação -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <p>ContactManager</p>
+        </div>
+
+        <!-- Itens de acesso na barra de navegação: 'Cadastrar Usuários' e 'Usuários' -->
+
+        <div class="menu">
+            <a href="#" class="active">Cadastrar Usuários</a>
+            <a href="#">Usuários</a>
+        </div>
+    </nav>
+
+    <!-- Construção do conteúdo principal da página: formulário de cadastro -->
+
+    <main class="container">
+        <div class="title">
+            <h1>Cadastro de Usuários</h1>
+            <p>Adicione e gerencie usuários</p>
+        </div>
+
+        <!-- Contâiner do formulário da página -->
+
+        <div class="form">
+            <h3>Novo Usuário</h3>
+
+            <!-- Formulário da página -->
+
+            <form>
+                <label for="name">Nome</label>
+                <input type="text" name="name" placeholder="Nome completo" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="seu@email.com" required>
+
+                <label for="phone">Telefone</label>
+                <input type="text" name="phone" placeholder="Apenas números" required>
+
+                <button type="submit">Adicionar Usuário</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="src/script.js"></script> <!-- Link: arquivo 'script.js' para lógica -->
 </body>
 </html>
