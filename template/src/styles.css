@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* Configurações gerais para o documento */
+/* Configurações gerais para o documento HTML */
 
 * {
     box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
     background-color: #F9FAFC;
 }
 
-/* Estilizações para a barra de navegação */
+/* Estilizações para a barra de navegação ('index.html' + 'users.html') */
 
 .navbar {
     align-items: center;
@@ -54,9 +54,11 @@ body {
     font-weight: bold;
 }
 
-/* Estilizações para o conteúdo principal */
+/* Estilizações para o formulário de cadastro de usuários em 'index.html' */
+/* Observação: aproveitamento de estilos para o arquivo 'users.html' */
 
-.container {
+.form-container,
+.users-container {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -64,21 +66,24 @@ body {
     margin-top: 20px;
 }
 
-.container .title {
+.form-container .title,
+.users-container .title {
     text-align: center;
 }
 
-.container .title h1 {
+.form-container .title h1,
+.users-container .title h1 {
     color: #1F2F48;
     margin-bottom: 15px;
 }
 
-.container .title p {
+.form-container .title p,
+.users-container .title p {
     color: #858C98;
     margin-bottom: 15px;
 }
 
-.container .form {
+.form-container .form {
     background-color: #FFF;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -87,22 +92,22 @@ body {
     width: 100%;
 }
 
-.container .form h3 {
+.form-container .form h3 {
     color: #1F2F48;
     margin-bottom: 15px;
 }
 
-.container .form form {
+.form-container .form form {
     display: flex;
     flex-direction: column;
 }
 
-.container .form label {
+.form-container .form label {
     color: #1F2F48;
     margin-bottom: 5px;
 }
 
-.container .form input {
+.form-container .form input {
     background-color: #F7F7F7;
     border: 1px solid #D0DBEF;
     border-radius: 5px;
@@ -113,12 +118,12 @@ body {
     transition: border-color 0.3s ease;
 }
 
-.container .form input:focus {
+.form-container .form input:focus {
     border-color: #4D6281;
     border-width: 2px;
 }
 
-.container .form button {
+.form-container .form button {
     background-color: #4D6281;
     border: none;
     border-radius: 5px;
@@ -129,6 +134,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.container .form button:hover {
+.form-container .form button:hover {
     background-color: #708EBC;
 }
