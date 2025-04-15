@@ -78,3 +78,129 @@ body {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
+.users-container .users-table {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    padding: 1.5rem;
+    width: 400px;
+}
+
+.users-container .table-title {
+    color: #1F2F48;
+    font-size: 1rem;
+}
+
+.users-table {
+    background-color: #FFF;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    overflow: hidden;
+    width: 100%;
+}
+
+.users-table th,
+.users-table td {
+    border-bottom: 1px solid #EDF2F7;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.users-table th {
+    background-color: #F7FAFC;
+    color: #1F2F48;
+    font-weight: 600;
+}
+
+.users-table tbody tr td[colspan="4"] {
+    color: #63636D;
+    display: table-cell;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.delete-btn {
+    background: #ff4444;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar .menu {
+        gap: 10px;
+    }
+
+    .users-container .users-table {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1rem;
+    }
+
+    .navbar .menu a {
+        font-size: 0.875rem;
+    }
+
+    .users-container {
+        gap: 0.5rem;
+        padding: 0 2%;
+    }
+
+    .users-container .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .users-container .title p {
+        font-size: 0.875rem;
+    }
+
+    .users-container .users-table {
+        padding: 0.5rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .delete-btn {
+        padding: 3px 8px;
+        font-size: 0.75rem;
+    }
+}
