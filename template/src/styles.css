@@ -16,7 +16,7 @@ body {
     font-size: 16px;
 }
 
-/* Estilizações para a barra de navegação ('index.html' + 'users.html') */
+/* Estilos para a barra de navegação ('index.html' + 'users.html') */
 
 .navbar {
     align-items: center;
@@ -54,7 +54,7 @@ body {
     font-weight: bold;
 }
 
-/* Estilizações para o formulário de cadastro de usuários em 'index.html' */
+/* Estilos para o formulário de cadastro de usuários em 'index.html' */
 /* Observação: aproveitamento de estilos para o arquivo 'users.html' */
 
 .form-container,
@@ -141,6 +141,15 @@ body {
 
 .form-container .form button:hover {
     background-color: #708EBC;
+}
+
+/* Estilos para mensagens de erro no formulário */
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
 }
 
 /* Responsividade */
