@@ -2,6 +2,7 @@
 
 const form = document.querySelector("form");
 const nameInput = form.querySelector("input[name='name']");
+
 const emailInput = form.querySelector("input[name='email']");
 const phoneInput = form.querySelector("input[name='phone']");
 
@@ -9,12 +10,14 @@ const phoneInput = form.querySelector("input[name='phone']");
 
 function showError(input, message) {
     const error = input.nextElementSibling;
+
     if (error && error.classList.contains("error-message")) {
         error.remove();
     }
 
     const errorMessage = document.createElement("span");
     errorMessage.className = "error-message";
+
     errorMessage.textContent = message;
     input.insertAdjacentElement("afterend", errorMessage);
 }
@@ -64,6 +67,7 @@ form.addEventListener("submit", (event) => {
 
     // Valida o campo E-mail
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!emailRegex.test(emailInput.value.trim())) {
         showError(emailInput, "Insira um e-mail válido.");
         isValid = false;
@@ -71,6 +75,7 @@ form.addEventListener("submit", (event) => {
 
     // Valida o campo Telefone
     const phoneRegex = /^\d+$/;
+
     if (!phoneRegex.test(phoneInput.value.trim())) {
         showError(phoneInput, "Insira apenas números no telefone.");
         isValid = false;
@@ -78,6 +83,7 @@ form.addEventListener("submit", (event) => {
 
     if (isValid) {
         const userName = nameInput.value.trim();
+
         showAlert(`${userName} foi adicionado com sucesso!`);
         form.reset();
     }
