@@ -1,0 +1,80 @@
+/* Link: importação de fonte externa (Inter) via Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Configurações gerais para o documento HTML */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F9FAFC;
+    font-size: 16px;
+}
+
+/* Estilos para a barra de navegação */
+
+.navbar {
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+
+.navbar .logo {
+    color: #63636D;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .menu a {
+    color: #63636D;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar .menu a.active {
+    color: #2F2F2F;
+    font-weight: bold;
+}
+
+.navbar .menu a:hover {
+    color: #2F2F2F;
+}
+
+/* Estilos para a tabela de gerenciamento de usuários + configurações gerais */
+
+.users-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0 5%;
+}
+
+.users-container .title {
+    text-align: center;
+}
+
+.users-container .title h1 {
+    color: #1F2F48;
+}
+
+.users-container .title p {
+    color: #63636D;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}

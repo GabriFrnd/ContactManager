@@ -16,7 +16,7 @@ body {
     font-size: 16px;
 }
 
-/* Estilos para a barra de navegação ('index.html' + 'users.html') */
+/* Estilos para a barra de navegação */
 
 .navbar {
     align-items: center;
@@ -54,10 +54,9 @@ body {
     color: #2F2F2F;
 }
 
-/* Estilos para o formulário */
+/* Estilos para o formulário + configurações gerais */
 
-.form-container,
-.users-container {
+.form-container {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -66,9 +65,18 @@ body {
     padding: 0 5%;
 }
 
-.form-container .title,
-.users-container .title {
+.form-container .title {
     text-align: center;
+}
+
+.form-container .title h1 {
+    color: #1F2F48;
+}
+
+.form-container .title p {
+    color: #63636D;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .form-container .form {
