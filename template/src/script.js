@@ -8,18 +8,14 @@ const phoneInput = form.querySelector("input[name='phone']");
 // Função para criar uma mensagem de erro
 
 function showError(input, message) {
-    // Remove qualquer mensagem de erro existente
     const error = input.nextElementSibling;
     if (error && error.classList.contains("error-message")) {
         error.remove();
     }
 
-    // Cria uma nova mensagem de erro
     const errorMessage = document.createElement("span");
     errorMessage.className = "error-message";
     errorMessage.textContent = message;
-
-    // Insere a mensagem logo após o input
     input.insertAdjacentElement("afterend", errorMessage);
 }
 
@@ -30,10 +26,33 @@ function clearErrors() {
     errors.forEach(error => error.remove());
 }
 
+// Função para exibir o alerta
+
+function showAlert(message) {
+    // Cria o contêiner do alerta
+    const alert = document.createElement("div");
+    alert.className = "alert";
+
+    // Adiciona o texto do alerta
+    alert.innerHTML = `
+        <strong>Usuário adicionado</strong>
+        <span>${message}</span>
+    `;
+
+    // Adiciona o alerta ao corpo do documento
+    document.body.appendChild(alert);
+
+    // Remove o alerta após 3 segundos
+    setTimeout(() => {
+        alert.remove();
+    }, 3000);
+}
+
 // Validação do formulário
+
 form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Impede o envio do formulário
-    clearErrors(); // Limpa mensagens de erro anteriores
+    event.preventDefault();
+    clearErrors();
 
     let isValid = true;
 
@@ -57,11 +76,9 @@ form.addEventListener("submit", (event) => {
         isValid = false;
     }
 
-    // Caso todos os campos sejam válidos, pode prosseguir
-
     if (isValid) {
-        const userName = nameInput.value.trim(); // Obtém o nome do usuário
-        alert(`${userName} adicionado com sucesso!`); // Mostra o alerta com o nome do usuário
-        form.reset(); // Limpa o formulário
+        const userName = nameInput.value.trim();
+        showAlert(`${userName} foi adicionado com sucesso!`);
+        form.reset();
     }
 });
